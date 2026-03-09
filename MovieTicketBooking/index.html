@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Đặt Vé Xem Phim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="movie-container">
+        <label>Chọn phim đang chiếu:</label>
+        <select id="movie">
+            <option value="120000">Lật Mặt 7 (120.000đ)</option>
+            <option value="100000">Doraemon (100.000đ)</option>
+            <option value="150000">Godzilla vs. Kong (150.000đ)</option>
+        </select>
+    </div>
+
+    <ul class="showcase">
+        <li>
+            <div class="seat"></div>
+            <small>Ghế trống</small>
+        </li>
+        <li>
+            <div class="seat selected"></div>
+            <small>Đang chọn</small>
+        </li>
+        <li>
+            <div class="seat occupied"></div>
+            <small>Đã có người</small>
+        </li>
+    </ul>
+
+    <div class="container">
+        <div class="screen"></div>
+
+        <div class="row">
+            <div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div>
+            <div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div><div class="seat"></div><div class="seat occupied"></div><div class="seat occupied"></div>
+            <div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div>
+            <div class="seat"></div><div class="seat"></div><div class="seat occupied"></div><div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div>
+            <div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div>
+        </div>
+    </div>
+
+    <p class="total-text">
+        Bạn đã chọn <span id="count">0</span> ghế. <br>
+        Tổng số tiền thanh toán: <span id="total">0</span> VNĐ
+    </p>
+
+    <button id="btn-checkout">Xác nhận đặt vé</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
